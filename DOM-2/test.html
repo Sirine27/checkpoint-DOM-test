@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" >
+        <div>
+            <div class="click-cart">
+                <div class="cart-row2">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-row">
+                    <div class="lakn">
+                        <img class="shop-item-cart" src="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg">
+                        <span class="shop-title">Product 1</span>
+                        <span class="shop-price">$19.99</span>
+                        <input class="quantity-input" type="number" value="1" />
+                        <button class="delete-cart">X</button>
+                    </div>
+                </div>
+                <div class="clear-checkout">
+                    <button class="checkout">Checkout</button>
+                    <button class="clear-cart">Clear Cart</button>
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$10.79</span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        let removeCartItemButtons = document.querySelectorAll('.delete-cart');
+        for (let i = 0; i < removeCartItemButtons.length; i++) {
+
+            let button = removeCartItemButtons[i]
+            button.addEventListener('click', removeCartItem)
+        }
+
+        let quantityInputs = document.querySelectorAll('.quantity-input');
+        for (let i = 0; i < quantityInputs.length; i++) {
+
+            let input = quantityInputs[i]
+            input.addEventListener('change', quantityChanged);
+        }
+
+        function removeCartItem(event) {
+            let buttonCliked = event.target;
+            buttonCliked.parentElement.parentElement.remove()
+            updateCartTotal()
+        }
+
+        function quantityChanged() {
+
+            let input = event.target;
+            if (isNaN(input.value) || input.value <= 0) {
+                input.value = 1;
+            }
+            updateCartTotal()
+        }
+
+        function updateCartTotal() {
+            let cartItemContainer = document.querySelector('.click-cart');
+            let cartRows = cartItemContainer.querySelectorAll('.cart-row');
+
+            let total = 0
+            for (let i = 0; i < cartRows.length; i++) {
+                let cartRow = cartRows[i]
+                let priceElement = cartRow.querySelector('.shop-price');
+                let quantityElement = cartRow.querySelector('.quantity-input');
+
+                let price = parseFloat(priceElement.innerText.replace('$', ''))
+                let quantity = quantityElement.value
+                total = total + (price * quantity)
+            }
+            total = Math.round(total * 100) / 100
+            document.querySelector('.cart-total-price').innerText = '$' + total;
+        }
+    </script>
+</body>
+</html>

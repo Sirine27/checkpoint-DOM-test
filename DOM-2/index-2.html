@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a7567117ed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style-2.css">
+    
+    <title>My Store</title>
+</head>
+<body>
+ 
+    <div class="shopping-cart">
+      
+        <!-- Title -->
+        <div class="title">
+          My Sweet Dolls
+        </div>      
+        <div class="cart-items">
+        <!-- Product #1 -->
+      <div class="cart-row">
+        <div class="cart-item cart column">
+          <img class="poupé" src="item-1.png" alt="" /> </div> 
+           <div class="title-item">My Beautiful "SAMRA"</div>
+                  
+<span class="cart-price cart-column">$20</span>
+<div class="form-group">
+  <button type="submit" value="+" onclick="minusoperation(1)" class="minus">-</button>
+  <input type="number" class="cart-quantity-input" id="number1" name="1" min="0" max="100" onchange="inputNumber(this)" data-prevvalue=0 value="0" disabled/>
+  <button type="submit" value="+" onclick="plusoperation(1)" class="plus">+</button>
+       </div>
+            
+  
+      <div class="buttons">
+       
+        <button id="Button" onclick="myFunc()">
+          <i id="p" class="fas fa-heart"></i>
+        </button> 
+        <button onclick="Delete(this)"> <img src="delete-icn.svg" alt=""></button>
+      </div>
+</div>
+
+      <!-- Product #2 -->
+      <div class="cart-row">   
+        <div class="cart-item cart column">
+          <img class="poupé" src="item-2.png" alt=""/></div>
+          <div class="title-item">My Beautiful "ROSA"</div>
+        
+        <span class="cart-price cart-column">$20</span>
+        <div class="form-group">
+          <button type="submit" value="+" onclick="minusoperation(2)" class="minus">-</button>
+          <input type="number" class="cart-quantity-input" id="number2" name="2" min="0" max="100" onchange="inputNumber(this)" data-prevvalue=0 value="0" disabled/>
+          <button type="submit" value="+" onclick="plusoperation(2)" class="plus">+</button><br>     
+         
+    </div>
+   
+    <div class="buttons">
+    
+      <button id="Button-2" onclick="myyyFunc()">
+        <i id="p-p-p" class="fas fa-heart"></i>
+      </button>
+      <button onclick="Delete(this)"> <img src="delete-icn.svg" alt=""></button>
+    </div>
+</div>
+    <!-- Product #3 -->
+    <div class="cart-row"> 
+    <div class="cart-item cart column">
+    <img class="poupé" src="item-3.png" alt=""/></div>
+    <div class="title-item" > My Beautiful "TOTTA"
+  </div> 
+    <span class="cart-price cart-column">$20</span>
+    <div class="form-group">
+  
+      <button type="submit" value="+" onclick="minusoperation(3)" class="minus">-</button>
+      <input type="number" class="cart-quantity-input" id="number3" name="3" min="0" max="100" onchange="inputNumber(this)" data-prevvalue=0 value="0" disabled/>
+      <button type="submit" value="+" onclick="plusoperation(3)" class="plus">+</button>
+  </div>
+ 
+  <div class="buttons">
+    
+    <button id="Button-1" onclick="myyFunc()">
+      <i id="p-p" class="fas fa-heart"></i>
+    </button>
+    <button onclick="Delete(this)"> <img src="delete-icn.svg" alt=""></button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<div class="cart-total">
+
+  <strong class="cart-total-title">Total</strong>
+  
+  <span class="cart-total-price">$0</span>
+  
+  </div>
+
+
+
+<script src="script-2.js"></script>
+</body>
+</html>

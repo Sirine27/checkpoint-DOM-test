@@ -1,0 +1,140 @@
+
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #f3aacc;
+    font-family: 'pattaya';
+  }
+
+  .shopping-cart {
+    width: 1000px;
+    height: 500px;
+    margin: 40px auto;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 10px 10px rgba(19, 18, 18, 0.1);
+    border-radius: 6px;
+   
+    display: flex;
+    flex-direction: column;
+  }
+  #cart-items{
+    display: flex;
+    flex-direction: column;
+  }
+    .top-cart{
+      display: flex;
+      align-items: center;
+  flex-wrap: wrap;
+}
+    
+  .poupé {
+
+    height: 120%;
+    width: auto;
+
+}
+.title {
+    height: 80px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 10px 50px;
+    color: #5E6977;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .cart-total{
+    width:1000px;
+    height: 40px;
+    margin: 40px auto;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 10px 10px rgba(19, 18, 18, 0.1);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+   justify-content: space-around;
+   
+  }
+  .cart-row{
+    padding: 10px 10px ;
+padding-bottom: 40px;
+    height: 150px;
+    display: flex;
+   justify-content: space-around;
+  
+  }
+  .cart-row {
+    border-top:  1px solid #E1E8EE;
+    border-bottom:  1px solid #E1E8EE;
+   
+  }
+  .buttons, .cart-price, .form-group, .title-item {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+  .delete-btn,
+  .like-btn {
+    display: inline-block;
+    Cursor: pointer;
+  }
+  
+  .delete-btn {
+    width: 18px;
+    height: 17px;
+    background: url("delete-icn.svg") no-repeat center;
+  }
+ 
+
+  .total-price {
+    width: 83px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+  }
+
+ 
+  .styling-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.1rem 0.5rem 0.5rem;
+  background-color: aqua;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    color: #e8efff;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.styling-btn i {
+    margin-right: 0.7rem;
+    margin-left: 0.3rem;
+}
+  
+
+
+
+i:hover{
+    cursor: pointer;
+    color: #00f5c0;
+    
+    box-shadow: 10 10px 10px 10px rgba(255, 0, 0, 0.25);
+    transition: .4s;
+      
+  }
+ 
+ 
+  
+.paragraphClass {
+  font-size: 30px;
+  color: red;
+}
+
+#Button {
+  margin-top: 15px;
+}
